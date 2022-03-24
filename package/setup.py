@@ -556,14 +556,16 @@ if __name__ == '__main__':
     except (OSError, IOError):
         warnings.warn('Cannot write the list of authors.')
 
-    try:
-        # when building from repository for creating the distribution
-        LONG_DESCRIPTION = long_description("../README.rst")
-    except OSError:
-        # when building from a tar file for installation
-        # (LONG_DESCRIPTION is not really needed)
-        LONG_DESCRIPTION = "MDAnalysis -- https://www.mdanalysis.org/"
-
+#     try:
+#         # when building from repository for creating the distribution
+#         LONG_DESCRIPTION = long_description("../README.rst")
+#     except OSError:
+#         # when building from a tar file for installation
+#         # (LONG_DESCRIPTION is not really needed)
+#         LONG_DESCRIPTION = "MDAnalysis -- https://www.mdanalysis.org/"
+#   #  LONG_DESCRIPTION is not really needed
+    LONG_DESCRIPTION = "MDAnalysis -- https://www.mdanalysis.org/"
+  
     CLASSIFIERS = [
         'Development Status :: 6 - Mature',
         'Environment :: Console',
