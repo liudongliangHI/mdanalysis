@@ -541,7 +541,7 @@ def dynamic_author_list():
 def long_description(readme):
     """Create reST SUMMARY file for PyPi."""
 
-    with open(abspath(readme)) as summary:
+    with open(abspath(readme),encoding='utf-8') as summary:
         buffer = summary.read()
     # remove top heading that messes up pypi display
     m = re.search('====*\n[^\n]*README[^\n]*\n=====*\n', buffer,
